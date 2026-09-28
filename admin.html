@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin | A.T Microgreens</title><link rel="stylesheet" href="styles.css?v=20260928-admin1"></head><body>
+<header class="topbar"><div class="nav"><div class="brand">A.T Microgreens<small>PRIVATE STOCK ADMIN</small></div><a class="btn outline" href="shop.html">View Shop</a></div></header>
+<main class="wrap admin-shell">
+  <section class="admin-login-card" id="admin-login">
+    <h1>A.T Microgreens Admin</h1>
+    <p class="lead">Private stock and pricing control. Only authorised A.T administrators can make changes.</p>
+    <form id="admin-login-form" class="admin-login-form">
+      <label>Email<input id="admin-email" type="email" autocomplete="username" required></label>
+      <label>Password<input id="admin-password" type="password" autocomplete="current-password" required></label>
+      <button class="btn" type="submit">Sign in</button>
+    </form>
+  </section>
+  <section id="admin-panel" hidden>
+    <div class="admin-heading">
+      <div><h1>Stock Control</h1><p class="lead">Changes here update the public shop for everyone.</p></div>
+      <div class="admin-user"><span id="admin-who"></span><button id="admin-signout" class="btn outline" type="button">Sign out</button></div>
+    </div>
+    <div class="toolbar"><select id="admin-filter"><option>All</option><option>Single Varieties</option><option>Mixes</option></select><input id="admin-search" placeholder="Search products..."></div>
+    <div id="admin-status" class="admin-status"></div>
+    <div id="admin-products" class="admin-products"></div>
+  </section>
+</main>
+<script src="admin.js?v=20260928-admin1"></script></body></html>
