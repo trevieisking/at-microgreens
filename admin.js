@@ -311,7 +311,9 @@ async function saveInventoryBatch(id,btn){
 
 function drawHistory(){
   const el=document.querySelector('#history-list');if(!el)return;
+  const showHidden=!!document.querySelector('#history-show-hidden')?.checked;
   const orderEvents=adminOrderHistory.map(h=>({
+    id:h.id,source:'order',hidden:!!h.hidden,hiddenAt:h.hidden_at,
     when:h.changed_at,type:'Order',title:(adminOrders.find(o=>o.id===h.order_id)?.order_number||h.order_id),
     detail:[h.event_type,h.old_value&&('from '+h.old_value),h.new_value&&('to '+h.new_value),h.note].filter(Boolean).join(' · ')
   }));
@@ -320,10 +322,34 @@ function drawHistory(){
     let d=[];
     if(h.old_stock!==h.new_stock)d.push((h.old_stock?'In stock':'Out of stock')+' → '+(h.new_stock?'In stock':'Out of stock'));
     if(Number(h.old_price)!==Number(h.new_price))d.push(adminMoney(h.old_price)+' → '+adminMoney(h.new_price));
-    return {when:h.changed_at,type:'Stock',title:p?.name||h.product_id,detail:d.join(' · ')||'Product changed'};
+    return {id:h.id,source:'stock',hidden:!!h.hidden,hiddenAt:h.hidden_at,when:h.changed_at,type:'Stock',title:p?.name||h.product_id,detail:d.join(' · ')||'Product changed'};
   });
-  const rows=[...orderEvents,...stockEvents].sort((a,b)=>new Date(b.when)-new Date(a.when)).slice(0,250);
-  el.innerHTML=rows.map(h=>`<div class="history-row"><span class="history-type">${esc(h.type)}</span><div><strong>${esc(h.title)}</strong><small>${esc(h.detail)}</small></div><time>${fmtDateTime(h.when)}</time></div>`).join('')||'<div class="notice">No history yet.</div>';
+  const rows=[...orderEvents,...stockEvents]
+    .filter(h=>showHidden||!h.hidden)
+    .sort((a,b)=>new Date(b.when)-new Date(a.when))
+    .slice(0,250);
+  el.innerHTML=rows.map(h=>`<div class="history-row ${h.hidden?'history-hidden':''}">
+    <span class="history-type">${esc(h.type)}</span>
+    <div><strong>${esc(h.title)}</strong><small>${esc(h.detail)}${h.hidden?' · REMOVED':''}</small></div>
+    <time>${fmtDateTime(h.when)}</time>
+    <button class="history-action ${h.hidden?'restore':''}" type="button" onclick="setHistoryHidden('${h.source}',${h.id},${!h.hidden})">${h.hidden?'Restore':'Remove'}</button>
+  </div>`).join('')||'<div class="notice">No history entries to show.</div>';
+}
+
+async function setHistoryHidden(source,id,hidden){
+  const table=source==='order'?'at_microgreens_order_history':'at_microgreens_stock_history';
+  if(hidden&&!confirm('Remove this entry from the normal History view? It can be restored later.'))return;
+  setStatus(hidden?'Removing history entry…':'Restoring history entry…');
+  try{
+    await api('/rest/v1/'+table+'?id=eq.'+encodeURIComponent(id),{
+      method:'PATCH',
+      headers:{Prefer:'return=representation'},
+      body:JSON.stringify({hidden})
+    });
+    await loadOperationalData();
+    drawHistory();
+    setStatus(hidden?'History entry removed from normal view.':'History entry restored.','ok');
+  }catch(e){setStatus(e.message,'error')}
 }
 
 function drawSettings(){
@@ -359,6 +385,7 @@ function wireStatic(){
   document.querySelector('#test-order-form')?.addEventListener('submit',createTestOrder);
   document.querySelector('#inventory-form')?.addEventListener('submit',createInventoryBatch);
   document.querySelector('#settings-form')?.addEventListener('submit',saveSettings);
+  document.querySelector('#history-show-hidden')?.addEventListener('change',drawHistory);
   document.querySelector('#order-delivery-fee')?.addEventListener('input',e=>e.target.dataset.touched='1');
   document.querySelector('#order-fulfilment')?.addEventListener('change',e=>{
     const fee=document.querySelector('#order-delivery-fee');
