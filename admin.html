@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin | A.T Microgreens</title><link rel="stylesheet" href="styles.css?v=20260928-ops1"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin | A.T Microgreens</title><link rel="stylesheet" href="styles.css?v=20260928-history1"></head><body>
 <header class="topbar"><div class="nav"><div class="brand">A.T Microgreens<small>PRIVATE OPERATIONS ADMIN</small></div><a class="btn outline" href="shop.html">View Shop</a></div></header>
 <main class="wrap admin-shell">
   <section class="admin-login-card" id="admin-login">
@@ -78,7 +78,8 @@
     </section>
 
     <section class="admin-section" data-admin-section="history">
-      <div class="admin-section-head"><div><h2>History</h2><p>Recent order, delivery, stock and price changes.</p></div></div>
+      <div class="admin-section-head"><div><h2>History</h2><p>Recent order, delivery, stock and price changes. Removed entries are hidden, not destroyed.</p></div></div>
+      <div class="history-controls"><label class="check-line"><input id="history-show-hidden" type="checkbox"> Show removed entries</label><span>Removed entries can be restored at any time.</span></div>
       <div id="history-list" class="ops-list"></div>
     </section>
 
@@ -99,4 +100,4 @@
     </section>
   </section>
 </main>
-<script src="admin.js?v=20260928-ops1"></script></body></html>
+<script src="admin.js?v=20260928-history1"></script></body></html>
