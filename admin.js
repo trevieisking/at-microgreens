@@ -115,11 +115,16 @@ function setStatus(message,type=''){
   el.textContent=message;
   el.className='admin-status '+type;
 }
-
+function setLoginError(message=''){
+  const el=document.querySelector('#admin-login-error');
+  if(!el)return;
+  el.textContent=message;
+  el.hidden=!message;
+}
 function showLogin(message=''){
   document.querySelector('#admin-login').hidden=false;
   document.querySelector('#admin-panel').hidden=true;
-  if(message)setStatus(message,'error');
+  setLoginError(message);
 }
 
 function showPanel(user,access){
@@ -131,6 +136,7 @@ function showPanel(user,access){
 async function bootAdmin(){
   document.querySelector('#admin-login-form')?.addEventListener('submit',async e=>{
     e.preventDefault();
+    setLoginError('');
     setStatus('Signing in…');
     const email=document.querySelector('#admin-email').value.trim();
     const password=document.querySelector('#admin-password').value;
