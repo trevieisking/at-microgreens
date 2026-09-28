@@ -5,7 +5,7 @@
     "description": "Mild, fresh flavour; popular in salads and sandwiches.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.25,
     "stock": false,
     "featured": true,
     "image": "assets/products/product-01.jpg"
@@ -16,7 +16,7 @@
     "description": "Peppery and crisp with vibrant stems.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.95,
     "stock": false,
     "featured": true,
     "image": "assets/products/product-02.jpg"
@@ -27,7 +27,7 @@
     "description": "Sweet, crisp and succulent shoots.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.5,
     "stock": false,
     "featured": true,
     "image": "assets/products/product-03.jpg"
@@ -38,7 +38,7 @@
     "description": "Nutty flavour with substantial leaves.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.75,
     "stock": false,
     "featured": true,
     "image": "assets/products/product-04.jpg"
@@ -49,7 +49,7 @@
     "description": "Mild flavour with rich purple colour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.95,
     "stock": false,
     "featured": true,
     "image": "assets/products/product-05.jpg"
@@ -60,7 +60,7 @@
     "description": "Robust green flavour and tender texture.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.95,
     "stock": false,
     "featured": true,
     "image": "assets/products/product-06.jpg"
@@ -71,7 +71,7 @@
     "description": "Bold, spicy flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.5,
     "stock": false,
     "featured": true,
     "image": "assets/products/product-07.jpg"
@@ -82,7 +82,7 @@
     "description": "Fresh, citrusy herb flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 6.95,
     "stock": false,
     "featured": true,
     "image": "assets/products/product-08.jpg"
@@ -93,7 +93,7 @@
     "description": "Aromatic basil flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 6.95,
     "stock": false,
     "featured": true,
     "image": "assets/products/product-09.jpg"
@@ -104,7 +104,7 @@
     "description": "Earthy flavour with colourful stems.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.5,
     "stock": false,
     "featured": true,
     "image": "assets/products/product-10.jpg"
@@ -115,7 +115,7 @@
     "description": "Peppery rocket flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.95,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-11.jpg"
@@ -126,7 +126,7 @@
     "description": "Classic sharp cress flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.75,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-12.jpg"
@@ -137,7 +137,7 @@
     "description": "Peppery flavour and crisp texture.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 5.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-13.jpg"
@@ -148,7 +148,7 @@
     "description": "Mild brassica flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.25,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-14.jpg"
@@ -159,7 +159,7 @@
     "description": "Tender, mild and fresh.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.25,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-15.jpg"
@@ -170,7 +170,7 @@
     "description": "Light mustard flavour with delicate leaves.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-16.jpg"
@@ -181,7 +181,7 @@
     "description": "Mild mustard flavour and spoon-shaped leaves.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-01.jpg"
@@ -192,7 +192,7 @@
     "description": "Mild brassica flavour with colourful stems.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-02.jpg"
@@ -203,7 +203,7 @@
     "description": "Fresh, mild brassica flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-03.jpg"
@@ -214,7 +214,7 @@
     "description": "Mild, clean brassica flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.25,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-04.jpg"
@@ -225,7 +225,7 @@
     "description": "Fresh mild cabbage flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.95,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-05.jpg"
@@ -236,7 +236,7 @@
     "description": "Mild brassica flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.25,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-06.jpg"
@@ -247,7 +247,7 @@
     "description": "Colourful leaves with an earthy flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 7.95,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-07.jpg"
@@ -258,7 +258,7 @@
     "description": "Distinctive aromatic flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-08.jpg"
@@ -269,7 +269,7 @@
     "description": "Fresh dill aroma and flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 5.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-09.jpg"
@@ -280,7 +280,7 @@
     "description": "Light aniseed aroma.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 5.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-10.jpg"
@@ -291,7 +291,7 @@
     "description": "Fresh celery flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 6.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-11.jpg"
@@ -302,7 +302,7 @@
     "description": "Classic parsley flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 5.95,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-12.jpg"
@@ -313,7 +313,7 @@
     "description": "Mild onion flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 6.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-13.jpg"
@@ -324,7 +324,7 @@
     "description": "Gentle allium flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 6.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-14.jpg"
@@ -335,7 +335,7 @@
     "description": "Fresh chive flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 7.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-15.jpg"
@@ -346,7 +346,7 @@
     "description": "Bright, tangy flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 7.95,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-16.jpg"
@@ -357,7 +357,7 @@
     "description": "Delicate carrot-top flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-01.jpg"
@@ -368,7 +368,7 @@
     "description": "Peppery leaves for colourful garnishes.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 9.95,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-02.jpg"
@@ -379,7 +379,7 @@
     "description": "Tangy leaves with striking red veins.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 9.95,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-03.jpg"
@@ -390,7 +390,7 @@
     "description": "Peppery radish with purple tones.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.25,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-04.jpg"
@@ -401,7 +401,7 @@
     "description": "Crisp and peppery.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-05.jpg"
@@ -412,7 +412,7 @@
     "description": "Colourful radish stems and peppery flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.25,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-06.jpg"
@@ -423,7 +423,7 @@
     "description": "Deep purple radish microgreens.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.25,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-07.jpg"
@@ -434,7 +434,7 @@
     "description": "Hot mustard-style flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.75,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-08.jpg"
@@ -445,7 +445,7 @@
     "description": "Spicy leaves with red-purple tones.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.75,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-09.jpg"
@@ -456,7 +456,7 @@
     "description": "Fresh mustard heat.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-10.jpg"
@@ -467,7 +467,7 @@
     "description": "Purple-stemmed brassica microgreen.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.75,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-11.jpg"
@@ -478,7 +478,7 @@
     "description": "Colourful kale with tender leaves.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.75,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-12.jpg"
@@ -489,7 +489,7 @@
     "description": "Sweet tender pea shoots.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.75,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-13.jpg"
@@ -500,7 +500,7 @@
     "description": "Classic pea shoot flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.75,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-14.jpg"
@@ -511,7 +511,7 @@
     "description": "Nutty, substantial sunflower greens.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.75,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-15.jpg"
@@ -522,7 +522,7 @@
     "description": "Soft green leaves with mild flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.75,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-16.jpg"
@@ -533,7 +533,7 @@
     "description": "Tender microgreens with a mild flavour.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.25,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-01.jpg"
@@ -544,7 +544,7 @@
     "description": "Fine tender shoots.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-02.jpg"
@@ -555,7 +555,7 @@
     "description": "Tender legume shoots.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-03.jpg"
@@ -566,7 +566,7 @@
     "description": "Fresh, crisp young greens.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-04.jpg"
@@ -577,7 +577,7 @@
     "description": "Tender legume shoots.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.75,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-05.jpg"
@@ -588,7 +588,7 @@
     "description": "Fresh young cereal grass.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.25,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-06.jpg"
@@ -599,7 +599,7 @@
     "description": "Fresh wheatgrass for juicing or blending.",
     "category": "Single Varieties",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.25,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-07.jpg"
@@ -610,7 +610,7 @@
     "description": "A balanced blend of mild and colourful microgreens.",
     "category": "Mixes",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.95,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-08.jpg"
@@ -621,7 +621,7 @@
     "description": "A punchier blend using peppery and mustard-style varieties.",
     "category": "Mixes",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.25,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-09.jpg"
@@ -632,7 +632,7 @@
     "description": "A gentle everyday blend.",
     "category": "Mixes",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.95,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-10.jpg"
@@ -643,7 +643,7 @@
     "description": "A colourful blend intended for plating and garnishes.",
     "category": "Mixes",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.95,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-11.jpg"
@@ -654,7 +654,7 @@
     "description": "A colourful mix of green, red and purple varieties.",
     "category": "Mixes",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.75,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-12.jpg"
@@ -665,7 +665,7 @@
     "description": "A varied blend for salads, sandwiches and bowls.",
     "category": "Mixes",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.75,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-13.jpg"
@@ -676,7 +676,7 @@
     "description": "A blend of broccoli, kale, cabbage and related varieties.",
     "category": "Mixes",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-14.jpg"
@@ -687,7 +687,7 @@
     "description": "Sweet pea shoots combined with nutty sunflower.",
     "category": "Mixes",
     "pack": "100g",
-    "price": 0.0,
+    "price": 3.95,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-15.jpg"
@@ -698,7 +698,7 @@
     "description": "A colourful small-leaf blend for finishing dishes.",
     "category": "Mixes",
     "pack": "100g",
-    "price": 0.0,
+    "price": 5.5,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-16.jpg"
@@ -709,7 +709,7 @@
     "description": "A rotating selection based on current crops.",
     "category": "Mixes",
     "pack": "100g",
-    "price": 0.0,
+    "price": 4.25,
     "stock": false,
     "featured": false,
     "image": "assets/products/product-01.jpg"
