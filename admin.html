@@ -1,23 +1,102 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin | A.T Microgreens</title><link rel="stylesheet" href="styles.css?v=20260928-admin1"></head><body>
-<header class="topbar"><div class="nav"><div class="brand">A.T Microgreens<small>PRIVATE STOCK ADMIN</small></div><a class="btn outline" href="shop.html">View Shop</a></div></header>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin | A.T Microgreens</title><link rel="stylesheet" href="styles.css?v=20260928-ops1"></head><body>
+<header class="topbar"><div class="nav"><div class="brand">A.T Microgreens<small>PRIVATE OPERATIONS ADMIN</small></div><a class="btn outline" href="shop.html">View Shop</a></div></header>
 <main class="wrap admin-shell">
   <section class="admin-login-card" id="admin-login">
     <h1>A.T Microgreens Admin</h1>
-    <p class="lead">Private stock and pricing control. Only authorised A.T administrators can make changes.</p>
-    <div id="admin-login-error" class="admin-status error" hidden></div><form id="admin-login-form" class="admin-login-form">
+    <p class="lead">Private stock, test-order, delivery and inventory control. Only authorised A.T administrators can make changes.</p>
+    <div id="admin-login-error" class="admin-status error" hidden></div>
+    <form id="admin-login-form" class="admin-login-form">
       <label>Email<input id="admin-email" type="email" autocomplete="username" required></label>
       <label>Password<input id="admin-password" type="password" autocomplete="current-password" required></label>
       <button class="btn" type="submit">Sign in</button>
     </form>
   </section>
+
   <section id="admin-panel" hidden>
     <div class="admin-heading">
-      <div><h1>Stock Control</h1><p class="lead">Changes here update the public shop for everyone.</p></div>
+      <div><h1>Operations Control</h1><p class="lead">Stock changes affect the public shop. Orders and deliveries are admin-only test systems while checkout and Stripe remain hard locked.</p></div>
       <div class="admin-user"><span id="admin-who"></span><button id="admin-signout" class="btn outline" type="button">Sign out</button></div>
     </div>
-    <div class="toolbar"><select id="admin-filter"><option>All</option><option>Single Varieties</option><option>Mixes</option></select><input id="admin-search" placeholder="Search products..."></div>
+
+    <nav class="admin-tabs" aria-label="Admin sections">
+      <button class="admin-tab active" data-admin-tab="stock" type="button">Stock</button>
+      <button class="admin-tab" data-admin-tab="orders" type="button">Orders</button>
+      <button class="admin-tab" data-admin-tab="deliveries" type="button">Deliveries</button>
+      <button class="admin-tab" data-admin-tab="inventory" type="button">Inventory</button>
+      <button class="admin-tab" data-admin-tab="history" type="button">History</button>
+      <button class="admin-tab" data-admin-tab="settings" type="button">Settings</button>
+    </nav>
+
     <div id="admin-status" class="admin-status"></div>
-    <div id="admin-products" class="admin-products"></div>
+
+    <section class="admin-section active" data-admin-section="stock">
+      <div class="admin-section-head"><div><h2>Stock & Prices</h2><p>These controls are the live public-shop authority.</p></div></div>
+      <div class="toolbar"><select id="admin-filter"><option>All</option><option>Single Varieties</option><option>Mixes</option></select><input id="admin-search" placeholder="Search products..."></div>
+      <div id="admin-products" class="admin-products"></div>
+    </section>
+
+    <section class="admin-section" data-admin-section="orders">
+      <div class="admin-section-head"><div><h2>Test Orders</h2><p>Admin-only order simulation. No customer checkout and no payment processing.</p></div><span class="lock-badge">TEST MODE</span></div>
+      <div class="admin-two-col">
+        <form id="test-order-form" class="ops-card ops-form">
+          <h3>Create Test Order</h3>
+          <label>Customer name<input id="order-customer-name" required></label>
+          <label>Email<input id="order-customer-email" type="email"></label>
+          <label>Phone<input id="order-customer-phone"></label>
+          <div class="ops-grid-2">
+            <label>Fulfilment<select id="order-fulfilment"><option value="delivery">Delivery</option><option value="collection">Collection</option></select></label>
+            <label>Delivery fee (£)<input id="order-delivery-fee" type="number" min="0" step="0.05" value="0.00"></label>
+          </div>
+          <label>Notes<textarea id="order-notes" rows="3"></textarea></label>
+          <h4>Products currently in stock</h4>
+          <div id="order-product-picker" class="order-product-picker"></div>
+          <button class="btn" type="submit">Create TEST order</button>
+        </form>
+        <div><div class="toolbar"><select id="order-status-filter"><option value="All">All statuses</option><option>draft</option><option>confirmed</option><option>preparing</option><option>ready</option><option>out_for_delivery</option><option>delivered</option><option>cancelled</option></select><input id="order-search" placeholder="Search order/customer..."></div><div id="orders-list" class="ops-list"></div></div>
+      </div>
+    </section>
+
+    <section class="admin-section" data-admin-section="deliveries">
+      <div class="admin-section-head"><div><h2>Deliveries</h2><p>Schedule and track delivery test orders. No customer-facing delivery booking is enabled.</p></div><span class="lock-badge">ADMIN ONLY</span></div>
+      <div id="deliveries-list" class="ops-list"></div>
+    </section>
+
+    <section class="admin-section" data-admin-section="inventory">
+      <div class="admin-section-head"><div><h2>Inventory Batches</h2><p>Track planned crops, harvests and available 100g units without changing public stock automatically.</p></div></div>
+      <div class="admin-two-col">
+        <form id="inventory-form" class="ops-card ops-form">
+          <h3>Create Batch</h3>
+          <label>Product<select id="inventory-product" required></select></label>
+          <label>Status<select id="inventory-status"><option>planned</option><option>growing</option><option>harvested</option><option>available</option><option>depleted</option><option>discarded</option></select></label>
+          <div class="ops-grid-2"><label>Sow date<input id="inventory-sow-date" type="date"></label><label>Harvest date<input id="inventory-harvest-date" type="date"></label></div>
+          <div class="ops-grid-2"><label>Best before<input id="inventory-best-before" type="date"></label><label>Available units<input id="inventory-quantity" type="number" min="0" step="1" value="0"></label></div>
+          <label>Notes<textarea id="inventory-notes" rows="3"></textarea></label>
+          <button class="btn" type="submit">Create batch</button>
+        </form>
+        <div id="inventory-list" class="ops-list"></div>
+      </div>
+    </section>
+
+    <section class="admin-section" data-admin-section="history">
+      <div class="admin-section-head"><div><h2>History</h2><p>Recent order, delivery, stock and price changes.</p></div></div>
+      <div id="history-list" class="ops-list"></div>
+    </section>
+
+    <section class="admin-section" data-admin-section="settings">
+      <div class="admin-section-head"><div><h2>Store Settings</h2><p>Operational settings only. Checkout, Stripe and public ordering are database-locked off.</p></div></div>
+      <div class="lock-grid">
+        <div class="lock-card"><strong>Public Checkout</strong><span>LOCKED OFF</span></div>
+        <div class="lock-card"><strong>Stripe</strong><span>LOCKED OFF</span></div>
+        <div class="lock-card"><strong>Public Ordering</strong><span>LOCKED OFF</span></div>
+      </div>
+      <form id="settings-form" class="ops-card ops-form settings-form">
+        <label class="check-line"><input id="settings-test-orders" type="checkbox"> Enable admin test orders</label>
+        <label>Default delivery fee (£)<input id="settings-delivery-fee" type="number" min="0" step="0.05"></label>
+        <label>Delivery area note<textarea id="settings-delivery-area" rows="3"></textarea></label>
+        <label>Order cut-off note<textarea id="settings-cutoff" rows="3"></textarea></label>
+        <button class="btn" type="submit">Save operational settings</button>
+      </form>
+    </section>
   </section>
 </main>
-<script src="admin.js?v=20260928-loginfix1"></script></body></html>
+<script src="admin.js?v=20260928-ops1"></script></body></html>
